@@ -67,7 +67,7 @@ const App = () => {
       <h1 className='time'>{formatTime(timeElapsed)}</h1>
       <div className='button'>
         <button className='button_item' onClick={() => dispatch(lapReset)}>{lapRestetLblChange}</button>
-        <button className='button_item' onClick={() => dispatch(statStop)}>{startStopLblChange}</button>
+          <button className= {isRunning  ? 'button_item button__red' : 'button_item button__green'} onClick={() => dispatch(statStop)}>{startStopLblChange}</button>
       </div>
       <table className='timer__table'>
         <tbody>
